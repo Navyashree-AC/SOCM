@@ -1,6 +1,7 @@
 # SOCM - Smart Oxygen Cylinger Monitoring
 
 Project vision:
+
 The amount of oxygen present inside an oxygen cylinder is a very vital piece information when such cylinders are in use for supply of oxygen in the current COVID scenario. Since the number of patients infected by COVID are very large, it becomes difficult to monitor all the isolation wards in the hospital simultaneously. Therefore, we aim to design a smart oxygen cylinder to automate this monitoring process by using a pressure sensor at the nozzle of the oxygen cylinder and using a precision barometric pressure and altimeter sensor to isolate the location of the cylinder that requires a refill. 
 
 Description and realization:
