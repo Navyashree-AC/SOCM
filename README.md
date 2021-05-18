@@ -6,7 +6,7 @@ The amount of oxygen present inside an oxygen cylinder is a very vital piece inf
 
 # Description and realization:
 
-# Components:
+ Components:
 
 •	Arduino development board – ATMEGA 32U4
 
