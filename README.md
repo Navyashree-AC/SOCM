@@ -40,6 +40,7 @@ Week-29-2021	Final presentation
 BOM link: 		https://octopart.com/bom-tool/JY80t9N7 
 
 Evaluation plan:
+
 •	Correctness of the pressure values from the pressure transducer
 
 •	Extracting accurate location details
