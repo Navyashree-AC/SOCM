@@ -1,4 +1,4 @@
-# SOCM - Smart Oxygen Cylinger Monitoring
+# SOCM - Smart Oxygen Cylinder Monitoring
 
 # Project vision:
 
