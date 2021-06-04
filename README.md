@@ -51,7 +51,7 @@ BOM link: 		https://octopart.com/bom-tool/JY80t9N7
 
 •	Correctness of the pressure values from the pressure transducer
 
-•	Extracting accurate location details
+•	Extracting location details using geo-location api succesfully
 
 •	Receiving alerts immediately as soon as the pressure decreases beyond the threshold value. 
 
