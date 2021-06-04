@@ -2,7 +2,7 @@
 
 # Project vision:
 
-The amount of oxygen present inside an oxygen cylinder is a vital piece of information as such cylinders are in use for supply of oxygen in the current COVID scenario. Since the number of patients infected by COVID are very large, it becomes difficult to monitor all the isolation wards in the hospital simultaneously. Therefore, we aim to design a smart oxygen cylinder to automate this monitoring process by using a pressure sensor at the nozzle of the oxygen cylinder and using a precision barometric pressure and altimeter sensor to isolate the location of the cylinder that requires a refill. 
+The amount of oxygen present inside an oxygen cylinder is a vital piece of information as such cylinders are in use for supply of oxygen in the current COVID scenario. Since the number of patients infected by COVID are very large, it becomes difficult to monitor all the isolation wards in the hospital simultaneously. Therefore, we aim to design a smart oxygen cylinder to automate this monitoring process by using a pressure transducer [M3031] at the nozzle of the oxygen cylinder and using indoor localisation to isolate the location of the cylinder that requires a refill. 
 
 # Description and realization:
 
@@ -10,15 +10,13 @@ The amount of oxygen present inside an oxygen cylinder is a vital piece of infor
 
 •	Arduino development board – ATMEGA 32U4
 
-•	Node MCU – ESP-8266
-
-•	Precision Barometric Pressure and Altimeter - Adafruit BMP390L
+•	ESP32 pico kit
 
 •	Pressure transducer – M3031
 
 •	Amplifier circuit 
 
-The amount of oxygen present inside the cylinder is measured by measuring the pressure at the outlet nozzle using a high precision Pressure sensor. The output of the pressure sensor is cascaded with a microcontroller to process the signal and display the pressure of oxygen cylinder. Whenever the level of oxygen is below a pre-decided value, a signal is further transmitted to the monitoring station through wireless communication module which in turn uses indoor localization which further conveys the exact location of the cylinder to give more accurate location of the oxygen cylinder in a populated hospital room and alerts the nearest attendant of the patient, so that the patient can be attended at the quickest. Graphical display is used at monitoring station to indicate the pressure in the oxygen cylinders to initiate actions like replacement of empty cylinders with filled ones.
+The amount of oxygen present inside the cylinder is measured by measuring the pressureb at the outlet nozzle using a high precision Pressure transducer [M3031] which gives an output of range from 0.5-5v for a pressure range of 0-2500psi. The output of the pressure sensor is cascaded with a microcontroller to process the signal and display the pressure of oxygen cylinder. Whenever the level of oxygen is below a pre-decided value, a signal is further transmitted to the monitoring station through wireless communication module which in turn uses indoor localization [ Google's geo location API ] which further conveys the location of the cylinder alerts the nearest attendant of the patient, so that the patient can be attended at the quickest. Graphical display is used at monitoring station to indicate the pressure in the oxygen cylinders to initiate actions like replacement of empty cylinders with filled ones.
 
 # References: 
 1) https://ieeexplore.ieee.org/document/621606
@@ -29,11 +27,11 @@ The amount of oxygen present inside the cylinder is measured by measuring the pr
 
 # Time plan:
 
-Week 21-2021  Acquiring pressure transducer values and sending it to Arduino
+Week 21-2021 Acquiring pressure transducer values and sending it to Arduino
 
-Week 22-2021	Acquiring location details of the cylinder
+Week 22-2021	Sending values to the cloud - check MQTT connection using ESP32 pico kit
 
-Week 23-2021	Sending values to the cloud
+Week 23-2021	Acquiring location details of the cylinder
 
 Week 24-2021	Getting alerts to mobile
 
