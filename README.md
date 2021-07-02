@@ -39,9 +39,9 @@ Week 25-2021	Integration
 
 Week 26-2021	Flutter Mobile APP to connect to mqtt cloud
 
-Week-27-2021	Pre-final presentation and improvement
+Week-27-2021 Alerts using Flutter app
 
-Week-28-2021	Final presentation
+Week-28-2021	Pre-final presentation and improvement
 
 Week-29-2021	Final presentation
 
