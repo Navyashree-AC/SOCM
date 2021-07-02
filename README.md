@@ -31,13 +31,13 @@ Week 21-2021 Acquiring pressure transducer values and sending it to Arduino
 
 Week 22-2021	Sending values to the cloud - check MQTT connection using ESP32 pico kit
 
-Week 23-2021	Acquiring location details of the cylinder
+Week 23-2021	Acquiring location details of the cylinder using GOOGLE LOCATION API
 
-Week 24-2021	Getting alerts to mobile
+Week 24-2021	Calibration and evaluvation of real-time results
 
 Week 25-2021	Integration
 
-Week 26-2021	Pre-final presentation and improvement
+Week 26-2021	Flutter Mobile APP to connect to mqtt cloud
 
 Week-27-2021	Pre-final presentation and improvement
 
