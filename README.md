@@ -2,7 +2,10 @@
 
 # Project vision:
 
-The amount of oxygen present inside an oxygen cylinder is a vital piece of information as such cylinders are in use for supply of oxygen in the current COVID scenario. Since the number of patients infected by COVID are very large, it becomes difficult to monitor all the isolation wards in the hospital simultaneously. Therefore, we aim to design a smart oxygen cylinder to automate this monitoring process by using a pressure transducer [M3031] at the nozzle of the oxygen cylinder and using indoor localisation to isolate the location of the cylinder that requires a refill. 
+The amount of oxygen present inside an oxygen cylinder is a vital piece of information, as such cylinders are in use for supply of oxygen in the current COVID scenario.
+Since the number of patients infected by COVID are very large, it becomes difficult to monitor all the isolation wards in a hospital simultaneously. 
+Therefore, we aim to design a system which continuously monitors the oxygen level in the cyclinder and sends a notification to alert the nearest attendant along with 
+the location of the cylinder, whenever the oxygen in the cylinder drops below a pre-defined threshold value. 
 
 # Description and realization:
 
@@ -14,9 +17,12 @@ The amount of oxygen present inside an oxygen cylinder is a vital piece of infor
 
 •	Pressure transducer – M3031
 
-•	Amplifier circuit 
-
-The amount of oxygen present inside the cylinder is measured by measuring the pressureb at the outlet nozzle using a high precision Pressure transducer [M3031] which gives an output of range from 0.5-5v for a pressure range of 0-2500psi. The output of the pressure sensor is cascaded with a microcontroller to process the signal and display the pressure of oxygen cylinder. Whenever the level of oxygen is below a pre-decided value, a signal is further transmitted to the monitoring station through wireless communication module which in turn uses indoor localization [ Google's geo location API ] which further conveys the location of the cylinder alerts the nearest attendant of the patient, so that the patient can be attended at the quickest. Graphical display is used at monitoring station to indicate the pressure in the oxygen cylinders to initiate actions like replacement of empty cylinders with filled ones.
+The amount of oxygen present inside the cylinder is identified by measuring the pressure at the outlet nozzle using a high precision Pressure transducer [M3031] 
+which gives an output of range from 0.5-5v for a pressure range of 0-100 psi.
+The output of the pressure sensor is read and processed by a microcontroller. Using ESP32 module, the pressure values will be published to the server using MQTT protocol.
+An application is developed which will read and display the values that are published by the ESP32 module. The application will generate a notification to alert the 
+nearest attendant about the drop in the pressure levels of the oxygen cylinders to initiate actions like replacement of empty cylinders with filled ones. 
+The App also features the location of the cylinder and redirects to Google Maps when the attendant wishes to locate the cylinder.
 
 # References: 
 1) https://ieeexplore.ieee.org/document/621606
@@ -27,34 +33,33 @@ The amount of oxygen present inside the cylinder is measured by measuring the pr
 
 # Time plan:
 
-Week 21-2021 Acquiring pressure transducer values and sending it to Arduino
+Week 21-2021   Acquiring pressure transducer values and sending it to Arduino
 
-Week 22-2021	Sending values to the cloud - check MQTT connection using ESP32 pico kit
+Week 22-2021	  Sending values to the ESP 32 pico kit and then to cloud - check MQTT connection using ESP32 pico kit
 
-Week 23-2021	Acquiring location details of the cylinder using GOOGLE LOCATION API
+Week 23-2021	  Acquiring location details of the cylinder using GOOGLE LOCATION API
 
-Week 24-2021	Calibration and evaluvation of real-time results
+Week 24-2021	  Calibration and evaluvation of real-time results
 
-Week 25-2021	Integration
+Week 25-2021	  Integration
 
-Week 26-2021	Flutter Mobile APP to connect to mqtt cloud
+Week 26-2021	  Connect Flutter Mobile APP to MQTT cloud
 
-Week-27-2021 Alerts using Flutter app
+Week-27-2021   Alerts using Flutter app
 
-Week-28-2021	Pre-final presentation and improvement
+Week-28-2021	  Identifying nearest attendant and sending an alert to them
 
-Week-29-2021	Final presentation
+Week-29-2021	  Final presentation
 
-BOM link: 		https://octopart.com/bom-tool/JY80t9N7 
+BOM link: 	https://octopart.com/bom-tool/JY80t9N7 
 
 # Evaluation plan:
 
-•	Correctness of the pressure values from the pressure transducer
+•	Check correctness of the pressure values from the pressure transducer
 
-•	Extracting location details using geo-location api succesfully
+•	Extracting location details using geo-location API succesfully
 
-•	Receiving alerts immediately as soon as the pressure decreases beyond the threshold value. 
-
+•	Sending alerts to the nearest attendant through the app using haversine formula, as soon as the pressure decreases beyond the threshold value. 
 
 
 
